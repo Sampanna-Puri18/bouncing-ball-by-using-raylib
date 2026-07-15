@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "/ucrt64/bin/g++",
+            "args": [
+                "-g", "main.cpp",
+                "-o", "main.exe",
+                "-std=c++11",
+                "-IC:/msys64/ucrt64/include",
+                "-LC:/msys64/ucrt64/lib",
+                "-lraylib", "-lopengl32", "-lgdi32", "-lwinmm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
